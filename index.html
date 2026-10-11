@@ -1,0 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIRÉ — NUIT</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #111111;
+      color: #f4f0e8;
+      font-family: Georgia, serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .invitation {
+      width: 90%;
+      max-width: 420px;
+      min-height: 560px;
+      padding: 60px 25px;
+      border: 1px solid #9b8b70;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .eyebrow {
+      font: 11px Arial, sans-serif;
+      letter-spacing: 5px;
+      color: #c5b69b;
+    }
+
+    h1 {
+      font-size: 54px;
+      font-weight: normal;
+      letter-spacing: 8px;
+      margin: 30px 0 8px;
+    }
+
+    h2 {
+      font-size: 19px;
+      font-weight: normal;
+      letter-spacing: 6px;
+      color: #c5b69b;
+    }
+
+    .description {
+      max-width: 270px;
+      font: 12px/1.8 Arial, sans-serif;
+      letter-spacing: 1px;
+      margin-top: 35px;
+    }
+
+    button {
+      margin-top: 35px;
+      padding: 13px 20px;
+      background: transparent;
+      border: 1px solid #c5b69b;
+      color: #f4f0e8;
+      cursor: pointer;
+      letter-spacing: 2px;
+    }
+
+    button:hover {
+      background: #c5b69b;
+      color: #111111;
+    }
+
+    #details {
+      display: none;
+      font: 12px/1.8 Arial, sans-serif;
+      margin-top: 20px;
+    }
+    
+.ar-link {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 18px;
+  border: 1px solid #f5f0e8;
+  color: #f5f0e8;
+  text-decoration: none;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+.ar-link:hover {
+  background: #f5f0e8;
+  color: #111111;
+}
+  </style>
+  
+<script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+</head>
+
+<body>
+  <main class="invitation">
+    <p class="eyebrow">COLLECTION 01</p>
+    <h1>NOIRÉ</h1>
+    <h2>NUIT</h2>
+
+    <p class="description">
+      AN EXPLORATION OF FORM,
+      TEXTURE AND NIGHT.
+    </p>
+
+    <p class="description">
+      PRIVATE COLLECTION PREVIEW
+    </p>
+
+    <button id="discover">DISCOVER THE SHOW</button>
+    
+<a href="ar.html" class="ar-link">ENTER THE AR EXPERIENCE</a>
+
+    <div id="details">
+      <p>COLLECTION 01 — NUIT</p>
+      <p>Show details coming soon.</p>
+      <p>A fictional student campaign.</p>
+    </div>
+  </main>
+
+  <script>
+    const button = document.getElementById("discover");
+    const details = document.getElementById("details");
+
+    button.addEventListener("click", function () {
+      details.style.display = "block";
+      button.textContent = "SHOW DETAILS REVEALED";
+    });
+  </script>
+</body>
+</html>

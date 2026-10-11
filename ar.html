@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOIRÉ — AR Experience</title>
+
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mind-ar@1.2.5/dist/mindar-image-aframe.prod.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      background: #111;
+      color: #f5f0e8;
+      font-family: Arial, sans-serif;
+    }
+
+    .heading {
+      position: fixed;
+      top: 18px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      z-index: 10;
+      letter-spacing: 4px;
+      pointer-events: none;
+    }
+
+    .heading p {
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="heading">
+    <div>NOIRÉ</div>
+    <p>COLLECTION 01 — NUIT</p>
+  </div>
+
+  <a-scene
+    mindar-image="imageTargetSrc: ./invitation.mind;"
+    embedded
+    color-space="sRGB"
+    renderer="colorManagement: true"
+    vr-mode-ui="enabled: false"
+    device-orientation-permission-ui="enabled: false">
+
+    <a-camera
+      position="0 0 0"
+      look-controls="enabled: false">
+    </a-camera>
+
+    <a-entity mindar-image-target="targetIndex: 0">
+
+      <a-plane
+        color="#111111"
+        width="0.9"
+        height="0.55"
+        position="0 0 0">
+      </a-plane>
+
+      <a-text
+        value="THE NIGHT\\nIS OURS"
+        color="#F5F0E8"
+        align="center"
+        width="2"
+        position="0 0.08 0.02">
+      </a-text>
+
+      <a-text
+        value="COLLECTION 01  |  NUIT"
+        color="#C6BBA8"
+        align="center"
+        width="1.5"
+        position="0 -0.14 0.02">
+      </a-text>
+
+    </a-entity>
+  </a-scene>
+</body>
+</html>
